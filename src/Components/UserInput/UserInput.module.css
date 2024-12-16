@@ -28,6 +28,7 @@
   animation-name: animatetop;
   animation-duration: 0.4s;
   border: none;
+  border-radius: 10px;
 }
 
 /* Add Animation */
@@ -57,6 +58,8 @@
   padding: 2px 16px;
   background-color: #1700e9;
   color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .modalBody {
@@ -74,6 +77,8 @@
   height: 30px;
   padding: 7px;
   border-radius: 10px;
+  font-weight: bold;
+  border: 3px solid rgb(55, 0, 255);
 }
 .input:focus {
   outline: none;
@@ -93,7 +98,12 @@
   color: white;
   cursor: pointer;
   transition: all 0.5s;
+  font-weight: bold;
 }
 .buttonStyle:hover {
   opacity: 0.7;
+}
+.buttonStyle:active {
+  background-color: rgb(0, 0, 168);
+  transition: all 0.5s;
 }

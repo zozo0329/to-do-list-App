@@ -1,0 +1,11 @@
+.CheckedItems {
+  width: auto;
+}
+.CheckedItems ul {
+  margin: 0px;
+  padding: 20px;
+}
+.CheckedItems li {
+  list-style-type: none;
+  font-size: 20px;
+}

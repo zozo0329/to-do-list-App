@@ -1,0 +1,11 @@
+.OutputList {
+  width: auto;
+}
+.OutputList ul {
+  margin: 0px;
+  padding: 20px;
+}
+.OutputList li {
+  list-style-type: none;
+  font-size: 20px;
+}

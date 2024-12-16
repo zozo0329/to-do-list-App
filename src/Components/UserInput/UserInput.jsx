@@ -10,7 +10,7 @@ const UserInput = (props) => {
       <div className={userStyle.modal}>
         <div className={userStyle.modalContent}>
           <div className={userStyle.modalHeader}>
-            <h2>Modal Header</h2>
+            <h2>Enter List</h2>
           </div>
           <form>
             <div className={userStyle.modalBody}>
@@ -25,7 +25,9 @@ const UserInput = (props) => {
                 >
                   Cancel
                 </button>
-                <button className={userStyle.buttonStyle}>Confirm</button>
+                <button className={userStyle.buttonStyle} type="submit">
+                  Confirm
+                </button>
               </div>
             </div>
           </form>
