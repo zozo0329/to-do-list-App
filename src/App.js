@@ -6,7 +6,6 @@ function App() {
   const [isOn, setIsOn] = useState(false);
   const modalHandler = () => {
     setIsOn(true);
-    console.log(isOn, "TEST");
   };
   return (
     <div className="App">

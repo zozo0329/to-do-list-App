@@ -14,3 +14,7 @@
 .icon:hover {
   opacity: 0.8;
 }
+.icon:active {
+  opacity: 0.4;
+  transition: all 0.5s;
+}
