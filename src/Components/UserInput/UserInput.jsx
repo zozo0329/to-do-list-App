@@ -7,6 +7,7 @@ const UserInput = (props) => {
   };
   const cancelHandler = () => {
     props.setIsOn(false);
+    console.log("CLOSE");
   };
   const submitHandler = (e) => {
     e.preventDefault();
@@ -14,12 +15,13 @@ const UserInput = (props) => {
       userInput,
       id: Math.random().toString(),
     };
-    props.userInput(userData);
+    props.addInputHandler(userData);
     // CLEANER
     setUserInput("");
   };
   return (
-    <div className="UserInput">
+    <>
+      <div className={userStyle.backdrop} onClick={cancelHandler} />
       <div className={userStyle.modal}>
         <div className={userStyle.modalContent}>
           <div className={userStyle.modalHeader}>
@@ -51,7 +53,7 @@ const UserInput = (props) => {
           </form>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

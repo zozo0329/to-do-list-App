@@ -7,10 +7,14 @@ const Output = (props) => {
     <div className="Output">
       <div className="output-container">
         <div className="list">
-          <OutputList userInfo={props.userInfo} />
+          <OutputList
+            setUserData={props.setUserData}
+            userInfo={props.userInfo}
+            setUserInfo={props.setUserInfo}
+          />
         </div>
         <div className="checked-list">
-          <CheckedItems />
+          <CheckedItems userData={props.userData} />
         </div>
       </div>
     </div>
