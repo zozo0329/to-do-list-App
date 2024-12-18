@@ -1,13 +1,13 @@
 import React from "react";
 import "./OutputList.css";
-const OutputList = () => {
+const OutputList = (props) => {
   return (
     <div className="OutputList">
       <h1>List Items</h1>
       <ul>
-        <li>Test List 1</li>
-        <li>Test List 2</li>
-        <li>Test List 3</li>
+        {props.userInfo.map((userData) => {
+          return <li key={userData.id}>{userData.userInput}</li>;
+        })}
       </ul>
     </div>
   );

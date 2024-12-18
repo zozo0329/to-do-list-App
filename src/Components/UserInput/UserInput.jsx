@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import userStyle from "./UserInput.module.css";
 const UserInput = (props) => {
+  const [userInput, setUserInput] = useState("");
+  const changeHandler = (e) => {
+    setUserInput(e.target.value);
+  };
   const cancelHandler = () => {
     props.setIsOn(false);
   };
-
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const userData = {
+      userInput,
+      id: Math.random().toString(),
+    };
+    props.userInput(userData);
+    // CLEANER
+    setUserInput("");
+  };
   return (
     <div className="UserInput">
       <div className={userStyle.modal}>
@@ -12,9 +25,14 @@ const UserInput = (props) => {
           <div className={userStyle.modalHeader}>
             <h2>Enter List</h2>
           </div>
-          <form>
+          <form onSubmit={submitHandler}>
             <div className={userStyle.modalBody}>
-              <input className={userStyle.input} type="text" />
+              <input
+                className={userStyle.input}
+                type="text"
+                onChange={changeHandler}
+                value={userInput}
+              />
             </div>
             <div className={userStyle.modalFooter}>
               <div className={userStyle.button}>
