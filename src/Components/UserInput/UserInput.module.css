@@ -94,6 +94,33 @@
 .input:focus {
   outline: none;
 }
+.invalidInput {
+  border: 3px solid red;
+  animation: shake 0.3s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .button {
   display: flex;
   justify-content: end;
@@ -117,4 +144,7 @@
 .buttonStyle:active {
   background-color: #0031b9;
   transition: all 0.5s;
+}
+.label.invalid {
+  color: red;
 }
